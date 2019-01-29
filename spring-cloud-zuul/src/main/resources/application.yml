@@ -1,0 +1,23 @@
+
+#
+#spring:
+#  application:
+#    name: service-zuul
+#server:
+#  port: 8109
+#eureka:
+#  client:
+#    register-with-eureka: true
+#    fetch-registry: true
+#    serviceUrl:
+#      defaultZone:http://eureka1:8098/eureka/,http://eureka2:8099/eureka/
+#
+#zuul:
+#  routes:
+#    api-ribbon:
+#      path:/api-ribbon/**
+#      serviceId:hystrix-ribbon
+#    api-feign:
+#      path:/api-feign/**
+#      serviceId:hystrix-feign
+

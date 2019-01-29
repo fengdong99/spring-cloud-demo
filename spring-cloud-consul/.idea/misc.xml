@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="EntryPointsManager">
+    <entry_points version="2.0" />
+  </component>
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/../spring-cloud-web" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/consul-producer1/pom.xml" />
+        <option value="$PROJECT_DIR$/consul-producer2/pom.xml" />
+        <option value="$PROJECT_DIR$/consul-consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/../spring-cloud-eureka/pom.xml" />
+        <option value="$PROJECT_DIR$/../spring-cloud-eureka/eureka-server1/pom.xml" />
+        <option value="$PROJECT_DIR$/../spring-cloud-eureka/eureka-server2/pom.xml" />
+        <option value="$PROJECT_DIR$/../spring-cloud-producer/pom.xml" />
+        <option value="$PROJECT_DIR$/../spring-cloud-producer/eureka-producer1/pom.xml" />
+        <option value="$PROJECT_DIR$/../spring-cloud-producer/eureka-producer2/pom.xml" />
+        <option value="$PROJECT_DIR$/../spring-cloud-eureka-client/pom.xml" />
+        <option value="$PROJECT_DIR$/../spring-cloud-ribbon/pom.xml" />
+        <option value="$PROJECT_DIR$/../spring-cloud-feign/pom.xml" />
+        <option value="$PROJECT_DIR$/../spring-cloud-web/pom.xml" />
+        <option value="$PROJECT_DIR$/../spring-cloud-hystrix/pom.xml" />
+        <option value="$PROJECT_DIR$/../spring-cloud-hystrix/spring-cloud-hystrix-ribbon/pom.xml" />
+        <option value="$PROJECT_DIR$/../spring-cloud-hystrix/spring-cloud-hystrix-feign/pom.xml" />
+        <option value="$PROJECT_DIR$/../spring-cloud-zuul/pom.xml" />
+        <option value="$PROJECT_DIR$/../springbooot-integration/pom.xml" />
+        <option value="$PROJECT_DIR$/../springbooot-integration/springboot-kafka-producer/pom.xml" />
+        <option value="$PROJECT_DIR$/../springbooot-integration/springboot-kafka-consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/../spring-cloud-admin/pom.xml" />
+        <option value="$PROJECT_DIR$/../springbooot-integration/kafka-demo/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" assert-keyword="true" jdk-15="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
