@@ -1,0 +1,13 @@
+
+
+spring:
+  application:
+    name: client-feign
+server:
+  port: 8105
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://eureka1:8098/eureka/,http://eureka2:8099/eureka/

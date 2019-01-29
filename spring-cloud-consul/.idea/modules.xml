@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/consul-consumer/consul-consumer.iml" filepath="$PROJECT_DIR$/consul-consumer/consul-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/consul-producer1/consul-producer1.iml" filepath="$PROJECT_DIR$/consul-producer1/consul-producer1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/consul-producer2/consul-producer2.iml" filepath="$PROJECT_DIR$/consul-producer2/consul-producer2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../spring-cloud-producer/eureka-producer1/eureka-producer1.iml" filepath="$PROJECT_DIR$/../spring-cloud-producer/eureka-producer1/eureka-producer1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../spring-cloud-producer/eureka-producer2/eureka-producer2.iml" filepath="$PROJECT_DIR$/../spring-cloud-producer/eureka-producer2/eureka-producer2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../spring-cloud-eureka/eureka-server1/eureka-server1.iml" filepath="$PROJECT_DIR$/../spring-cloud-eureka/eureka-server1/eureka-server1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../spring-cloud-eureka/eureka-server2/eureka-server2.iml" filepath="$PROJECT_DIR$/../spring-cloud-eureka/eureka-server2/eureka-server2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../springbooot-integration/kafka-demo/kafka-demo.iml" filepath="$PROJECT_DIR$/../springbooot-integration/kafka-demo/kafka-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../spring-cloud-admin/spring-cloud-admin.iml" filepath="$PROJECT_DIR$/../spring-cloud-admin/spring-cloud-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-cloud-consul.iml" filepath="$PROJECT_DIR$/spring-cloud-consul.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../spring-cloud-eureka/spring-cloud-eureka.iml" filepath="$PROJECT_DIR$/../spring-cloud-eureka/spring-cloud-eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../spring-cloud-eureka-client/spring-cloud-eureka-client.iml" filepath="$PROJECT_DIR$/../spring-cloud-eureka-client/spring-cloud-eureka-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../spring-cloud-feign/spring-cloud-feign.iml" filepath="$PROJECT_DIR$/../spring-cloud-feign/spring-cloud-feign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../spring-cloud-hystrix/spring-cloud-hystrix.iml" filepath="$PROJECT_DIR$/../spring-cloud-hystrix/spring-cloud-hystrix.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../spring-cloud-hystrix/spring-cloud-hystrix-feign/spring-cloud-hystrix-feign.iml" filepath="$PROJECT_DIR$/../spring-cloud-hystrix/spring-cloud-hystrix-feign/spring-cloud-hystrix-feign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../spring-cloud-hystrix/spring-cloud-hystrix-ribbon/spring-cloud-hystrix-ribbon.iml" filepath="$PROJECT_DIR$/../spring-cloud-hystrix/spring-cloud-hystrix-ribbon/spring-cloud-hystrix-ribbon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../spring-cloud-producer/spring-cloud-producer.iml" filepath="$PROJECT_DIR$/../spring-cloud-producer/spring-cloud-producer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../spring-cloud-ribbon/spring-cloud-ribbon.iml" filepath="$PROJECT_DIR$/../spring-cloud-ribbon/spring-cloud-ribbon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../spring-cloud-web/spring-cloud-web.iml" filepath="$PROJECT_DIR$/../spring-cloud-web/spring-cloud-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../spring-cloud-zuul/spring-cloud-zuul.iml" filepath="$PROJECT_DIR$/../spring-cloud-zuul/spring-cloud-zuul.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../springbooot-integration/springbooot-integration.iml" filepath="$PROJECT_DIR$/../springbooot-integration/springbooot-integration.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../springbooot-integration/springboot-kafka-consumer/springboot-kafka-consumer.iml" filepath="$PROJECT_DIR$/../springbooot-integration/springboot-kafka-consumer/springboot-kafka-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../springbooot-integration/springboot-kafka-producer/springboot-kafka-producer.iml" filepath="$PROJECT_DIR$/../springbooot-integration/springboot-kafka-producer/springboot-kafka-producer.iml" />
+    </modules>
+  </component>
+</project>

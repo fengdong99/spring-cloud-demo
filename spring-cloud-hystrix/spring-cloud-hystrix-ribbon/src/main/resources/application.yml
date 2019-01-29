@@ -1,0 +1,13 @@
+
+
+spring:
+  application:
+    name: hystrix-ribbon
+server:
+  port: 8107
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://eureka1:8098/eureka/,http://eureka2:8099/eureka/

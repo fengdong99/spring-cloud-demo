@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xuehai.web.dao.UserDao" >
+
+	<select id="selectUserInfo" parameterType="java.lang.Integer" resultType="com.xuehai.web.entity.UserEntity">
+
+        select
+          id,
+          user_name as 'userName',
+          user_age as 'userAge'
+        from user
+        where id = #{id}
+
+    </select>
+
+</mapper>
