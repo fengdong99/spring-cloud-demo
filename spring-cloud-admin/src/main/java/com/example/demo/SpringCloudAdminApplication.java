@@ -18,3 +18,5 @@ public class SpringCloudAdminApplication {
 		SpringApplication.run(SpringCloudAdminApplication.class, args);
 	}
 }
+
+

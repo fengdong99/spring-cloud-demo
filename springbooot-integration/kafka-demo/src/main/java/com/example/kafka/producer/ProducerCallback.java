@@ -2,15 +2,18 @@ package com.example.kafka.producer;
 
 
 import com.example.kafka.common.MessageEntity;
+import com.example.kafka.consumer.SimpleConsumer;
 import com.google.gson.Gson;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.producer.RecordMetadata;
+import org.slf4j.Logger;
 import org.springframework.kafka.support.SendResult;
 import org.springframework.lang.Nullable;
 import org.springframework.util.concurrent.ListenableFutureCallback;
 
 @Slf4j
 public class ProducerCallback implements ListenableFutureCallback<SendResult<String, MessageEntity>> {
+    private static final Logger log = org.slf4j.LoggerFactory.getLogger(ProducerCallback.class);
 
     private final long startTime;
     private final String key;
