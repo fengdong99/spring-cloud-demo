@@ -1,6 +1,6 @@
-package com.example.kafka.config;
+package com.example.demo.config;
 
-import com.example.kafka.common.MessageEntity;
+import com.example.demo.common.MessageEntity;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.StringSerializer;
 import org.springframework.beans.factory.annotation.Value;

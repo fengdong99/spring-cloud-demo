@@ -1,7 +1,6 @@
-package com.example.kafka.producer;
+package com.example.demo.producer;
 
-import com.example.kafka.common.MessageEntity;
-import com.example.kafka.config.KafkaProducerConfig;
+import com.example.demo.common.MessageEntity;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -14,7 +13,6 @@ import org.springframework.util.concurrent.ListenableFuture;
 public class SimpleProducer {
 
     /**
-     * @see KafkaProducerConfig#kafkaTemplate()
      */
     @Autowired
     @Qualifier("kafkaTemplate")

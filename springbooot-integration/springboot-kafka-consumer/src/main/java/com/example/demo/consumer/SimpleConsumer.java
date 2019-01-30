@@ -1,8 +1,7 @@
-package com.example.kafka.consumer;
+package com.example.demo.consumer;
 
 
-import com.example.kafka.common.MessageEntity;
-import com.example.kafka.config.KafkaConsumerConfig;
+import com.example.demo.common.MessageEntity;
 import com.google.gson.Gson;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
@@ -18,7 +17,6 @@ public class SimpleConsumer {
     private final Gson gson = new Gson();
 
     /**
-     * @see KafkaConsumerConfig#kafkaListenerContainerFactory()
      * @param message
      */
     @KafkaListener(topics = "${kafka.consumer.topic}", containerFactory = "kafkaListenerContainerFactory")
@@ -30,4 +28,5 @@ public class SimpleConsumer {
     public void receive1(MessageEntity message) {
         log.info("Consumer receive1:{}",gson.toJson(message));
     }
+
 }

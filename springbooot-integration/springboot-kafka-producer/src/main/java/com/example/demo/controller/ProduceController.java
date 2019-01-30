@@ -1,11 +1,11 @@
-package com.example.kafka.controller;
+package com.example.demo.controller;
 
 
-import com.example.kafka.common.ErrorCode;
-import com.example.kafka.common.KafkaLog4jAppender;
-import com.example.kafka.common.MessageEntity;
-import com.example.kafka.common.Response;
-import com.example.kafka.producer.SimpleProducer;
+import com.example.demo.common.ErrorCode;
+import com.example.demo.common.KafkaLog4jAppender;
+import com.example.demo.common.MessageEntity;
+import com.example.demo.common.Response;
+import com.example.demo.producer.SimpleProducer;
 import com.google.gson.Gson;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
