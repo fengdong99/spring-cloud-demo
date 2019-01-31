@@ -4,7 +4,7 @@
 #  application:
 #    name: service-zuul
 #server:
-#  port: 8109
+#  port: 8108
 #eureka:
 #  client:
 #    register-with-eureka: true
