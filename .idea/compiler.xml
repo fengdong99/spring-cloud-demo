@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="eureka-producer1" />
+        <module name="eureka-producer2" />
+        <module name="eureka-server1" />
+        <module name="eureka-server2" />
+        <module name="flume-demo" />
+        <module name="kafka-demo" />
+        <module name="spring-cloud-admin" />
+        <module name="spring-cloud-eureka-client" />
+        <module name="spring-cloud-feign" />
+        <module name="spring-cloud-hystrix-feign" />
+        <module name="spring-cloud-hystrix-ribbon" />
+        <module name="spring-cloud-ribbon" />
+        <module name="spring-cloud-web" />
+        <module name="spring-cloud-zuul" />
+        <module name="springbooot-integration" />
+        <module name="springboot-kafka-consumer" />
+        <module name="springboot-kafka-producer" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="8">
+      <module name="eureka-producer1" target="1.8" />
+      <module name="eureka-producer2" target="1.8" />
+      <module name="eureka-server1" target="1.8" />
+      <module name="eureka-server2" target="1.8" />
+      <module name="flume-demo" target="1.8" />
+      <module name="kafka-demo" target="1.8" />
+      <module name="spring-cloud-admin" target="1.8" />
+      <module name="spring-cloud-eureka-client" target="1.8" />
+      <module name="spring-cloud-feign" target="1.8" />
+      <module name="spring-cloud-hystrix-feign" target="1.8" />
+      <module name="spring-cloud-hystrix-ribbon" target="1.8" />
+      <module name="spring-cloud-ribbon" target="1.8" />
+      <module name="spring-cloud-web" target="1.8" />
+      <module name="spring-cloud-zuul" target="1.8" />
+      <module name="springbooot-integration" target="1.8" />
+      <module name="springboot-kafka-consumer" target="1.8" />
+      <module name="springboot-kafka-producer" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="eureka-producer1" options="-parameters" />
+      <module name="eureka-producer2" options="-parameters" />
+      <module name="eureka-server1" options="-parameters" />
+      <module name="eureka-server2" options="-parameters" />
+      <module name="flume-demo" options="-parameters" />
+      <module name="kafka-demo" options="-parameters" />
+      <module name="spring-cloud-admin" options="-parameters" />
+      <module name="spring-cloud-eureka-client" options="-parameters" />
+      <module name="spring-cloud-feign" options="-parameters" />
+      <module name="spring-cloud-hystrix-feign" options="-parameters" />
+      <module name="spring-cloud-hystrix-ribbon" options="-parameters" />
+      <module name="spring-cloud-ribbon" options="-parameters" />
+      <module name="spring-cloud-web" options="-parameters" />
+      <module name="spring-cloud-zuul" options="-parameters" />
+      <module name="springbooot-integration" options="-parameters" />
+      <module name="springboot-kafka-consumer" options="-parameters" />
+      <module name="springboot-kafka-producer" options="-parameters" />
+    </option>
+  </component>
+</project>

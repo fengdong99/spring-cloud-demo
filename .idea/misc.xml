@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/spring-cloud-web" />
+  </component>
+  <component name="JavaScriptSettings">
+    <option name="languageLevel" value="ES6" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/springbooot-integration/springboot-kafka-consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/springbooot-integration/springboot-kafka-producer/pom.xml" />
+        <option value="$PROJECT_DIR$/springbooot-integration/kafka-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-cloud-eureka/eureka-server1/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-cloud-eureka/eureka-server2/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-cloud-admin/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-cloud-producer/eureka-producer1/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-cloud-producer/eureka-producer2/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-cloud-eureka-client/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-cloud-feign/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-cloud-hystrix/spring-cloud-hystrix-feign/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-cloud-hystrix/spring-cloud-hystrix-ribbon/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-cloud-ribbon/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-cloud-zuul/pom.xml" />
+        <option value="$PROJECT_DIR$/springbooot-integration/pom.xml" />
+        <option value="$PROJECT_DIR$/springbooot-integration/flume-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-cloud-web/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+</project>
