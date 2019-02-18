@@ -13,4 +13,12 @@
 
     </select>
 
+    <select id="getUserInfo" parameterType="java.lang.Integer" resultType="com.xuehai.web.entity.UserEntity">
+         select
+          id,
+          user_name as 'userName',
+          user_age as 'userAge'
+        from user
+    </select>
+
 </mapper>

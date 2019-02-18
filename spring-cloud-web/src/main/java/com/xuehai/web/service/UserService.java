@@ -6,6 +6,8 @@ import com.xuehai.web.entity.UserEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * Created by 39450 on 2018/10/1.
  */
@@ -14,8 +16,12 @@ public class UserService {
     @Autowired
     private UserDao userDao;
 
-    @SysLogger(name = "service 测试",startTopic = true,topicId = "myTopic123")
     public UserEntity selectUserInfo(Integer id) {
         return userDao.selectUserInfo(id);
+    }
+
+//    @SysLogger(name = "service 测试",startTopic = true,topicId = "myTopic123")
+    public List<UserEntity> getUserInfo(Integer id) {
+        return userDao.getUserInfo(id);
     }
 }
