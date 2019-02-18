@@ -1,5 +1,6 @@
 package com.xuehai.web.controller;
 
+import com.xuehai.web.annotation.SysLogger;
 import com.xuehai.web.entity.UserEntity;
 import com.xuehai.web.service.UserService;
 import io.swagger.annotations.ApiImplicitParam;
@@ -28,4 +29,27 @@ public class UserController {
        return userService.selectUserInfo(id);
 
     }
+
+    @SysLogger(name = "controller 测试",startTopic = true,topicId = "myTopic123")
+    @RequestMapping({"/loggerTest"})
+    public void LoggerTest(){
+
+        System.out.println("## LoggerTest:");
+
+    }
+
+    @SysLogger(name = "Exception 测试",startTopic = true,topicId = "myTopic123")
+    @RequestMapping({"/loggerTest1"})
+    public String LoggerTest1() throws Exception{
+
+        try {
+            int i = 1 / 0 ;
+        } catch (Exception e){
+            System.out.println("## Exception:"+ e.getMessage());
+        }
+
+        return "";
+    }
+
+
 }
