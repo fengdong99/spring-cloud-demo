@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xuehai.web.dao.SysLoggerDao" >
+
+    <select id="saveSysLooger" parameterType="com.xuehai.web.entity.SysLoggerEntity" >
+
+       insert into sys_logger(id,name,exec_time,create_date) values (#{id},#{name},#{execTime},#{createDate})
+
+    </select>
+
+</mapper>
