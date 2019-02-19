@@ -26,4 +26,7 @@ public @interface SysLogger {
      */
     boolean startTopic() default false;
 
+
+    long startTime() default 123;
+
 }

@@ -25,10 +25,6 @@ public class SysLoggerAspect implements Ordered {
 
     private static final Logger logger = Logger.getLogger(SysLoggerAspect.class);
 
-    @Autowired
-    private SysLoggerService sysLoggerService;
-
-    private long startTime = 0;
 
     /**
      * 环绕通知（Around advice） ：包围一个连接点的通知，类似Web中Servlet规范中的Filter的doFilter方法。可以在方法的调用前后完成自定义的行为，也可以选择不执行。
@@ -36,8 +32,6 @@ public class SysLoggerAspect implements Ordered {
     @Around("actionAspect()")
     public Object doAround(ProceedingJoinPoint joinPoint) throws Throwable {
         System.out.println("=====SysLoggerAspect 环绕通知开始=====");
-        startTime = System.currentTimeMillis();
-//        handleLogger(joinPoint, null);
         Object obj = joinPoint.proceed();
         System.out.println("=====SysLoggerAspect 环绕通知结束=====");
         return obj;
@@ -65,7 +59,7 @@ public class SysLoggerAspect implements Ordered {
     @AfterReturning(pointcut = "actionAspect()")
     public void doAfter(JoinPoint joinPoint) {
         System.out.println("=====SysLoggerAspect 后置通知开始=====");
-        handleLogger(joinPoint, null);
+        HandleLogger.processor(joinPoint, null);
     }
 
     /**
@@ -74,66 +68,7 @@ public class SysLoggerAspect implements Ordered {
     @AfterThrowing(value = "actionAspect()", throwing = "e")
     public void doAfter(JoinPoint joinPoint, Exception e) {
         System.out.println("=====SysLoggerAspect 异常通知开始=====");
-        handleLogger(joinPoint, e);
-    }
-
-
-    /**
-     * 日志处理
-     */
-    private void handleLogger(JoinPoint joinPoint, Exception e) {
-
-        long endTime = System.currentTimeMillis() - startTime;
-        startTime = 0;
-        logger.info("exec time:"+ endTime);
-
-        if(e != null){
-            logger.info("errorMsg:" + e.getMessage());
-        }
-
-        try {
-            //获得注解
-            SysLogger sysLogger = checkAnnotation(joinPoint);
-            if (sysLogger == null) {
-                return;
-            } else {
-                logger.info(sysLogger.name());
-                logger.info(sysLogger.startTopic());
-                logger.info(sysLogger.topicId());
-            }
-
-
-            String methodName = joinPoint.getSignature().getName();
-
-            String classType = joinPoint.getTarget().getClass().getName();
-            Class<?> clazz = Class.forName(classType);
-            Method[] methods = clazz.getDeclaredMethods();
-
-            for (Method method : methods) {
-                if (method.isAnnotationPresent(SysLogger.class) && method.getName().equals(methodName) ) {
-                    String clazzName = clazz.getName();
-                    logger.info("clazzName: " + clazzName + ", methodName: " + method.getName());
-                }
-            }
-
-            sysLoggerService.saveSysLooger(new SysLoggerEntity(CommonUtil.getUuid(),sysLogger.name(),String.valueOf(endTime),CommonUtil.getSystemTime()));
-        } catch (Exception exception) {
-            logger.error("异常信息:"+exception.getMessage());
-        }
-    }
-
-    /**
-     * 检查注解方法
-     */
-    private static SysLogger checkAnnotation(JoinPoint joinPoint) throws Exception {
-        Signature signature = joinPoint.getSignature();
-        MethodSignature methodSignature = (MethodSignature) signature;
-        Method method = methodSignature.getMethod();
-
-        if (method != null) {
-            return method.getAnnotation(SysLogger.class);
-        }
-        return null;
+        HandleLogger.processor(joinPoint, e);
     }
 
 
