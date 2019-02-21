@@ -12,7 +12,7 @@ public class SysLoggerService {
 
     public void saveSysLooger(SysLoggerEntity sysLoggerEntity){
         try {
-            Thread.sleep(5000);
+            Thread.sleep(1000 * 0);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

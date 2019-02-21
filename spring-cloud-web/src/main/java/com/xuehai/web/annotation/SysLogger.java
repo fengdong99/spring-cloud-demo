@@ -3,6 +3,7 @@ package com.xuehai.web.annotation;
 import java.lang.annotation.*;
 
 /**
+ * 日志注解
  * Created by 39450 on 2019/2/17.
  */
 

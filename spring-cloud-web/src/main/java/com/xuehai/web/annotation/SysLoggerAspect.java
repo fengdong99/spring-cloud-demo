@@ -1,22 +1,18 @@
 package com.xuehai.web.annotation;
 
-import com.xuehai.web.dao.SysLoggerDao;
-import com.xuehai.web.entity.SysLoggerEntity;
+import com.xuehai.integration.ThreadPoolManager;
 import com.xuehai.web.service.SysLoggerService;
-import com.xuehai.web.tool.CommonUtil;
+import com.xuehai.web.service.UserService;
 import org.apache.log4j.Logger;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
-import org.aspectj.lang.Signature;
 import org.aspectj.lang.annotation.*;
-import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.Ordered;
 import org.springframework.stereotype.Component;
 
-import java.lang.reflect.Method;
-
 /**
+ * AOP
  * Created by 39450 on 2019/2/17.
  */
 @Component
@@ -25,17 +21,10 @@ public class SysLoggerAspect implements Ordered {
 
     private static final Logger logger = Logger.getLogger(SysLoggerAspect.class);
 
+    @Autowired
+    private SysLoggerService sysLoggerService;
 
-    /**
-     * 环绕通知（Around advice） ：包围一个连接点的通知，类似Web中Servlet规范中的Filter的doFilter方法。可以在方法的调用前后完成自定义的行为，也可以选择不执行。
-     */
-    @Around("actionAspect()")
-    public Object doAround(ProceedingJoinPoint joinPoint) throws Throwable {
-        System.out.println("=====SysLoggerAspect 环绕通知开始=====");
-        Object obj = joinPoint.proceed();
-        System.out.println("=====SysLoggerAspect 环绕通知结束=====");
-        return obj;
-    }
+    private static long startTime = 0;
 
     /**
      * 定义Pointcut，Pointcut的名称，此方法不能有返回值，该方法只是一个标示
@@ -44,6 +33,20 @@ public class SysLoggerAspect implements Ordered {
     public void actionAspect() {
 
     }
+
+    /**
+     * 环绕通知（Around advice） ：包围一个连接点的通知，类似Web中Servlet规范中的Filter的doFilter方法。可以在方法的调用前后完成自定义的行为，也可以选择不执行。
+     */
+    @Around("actionAspect()")
+    public Object  doAround(ProceedingJoinPoint joinPoint) throws Throwable {
+        startTime = System.currentTimeMillis();
+        System.out.println("=====SysLoggerAspect 环绕通知开始=====");
+        //执行目标方法
+        Object obj = joinPoint.proceed();
+        System.out.println("=====SysLoggerAspect 环绕通知结束=====");
+        return obj;
+    }
+
 
     /**
      * 前置通知（Before advice） ：在某连接点（JoinPoint）之前执行的通知，但这个通知不能阻止连接点前的执行。
@@ -59,7 +62,8 @@ public class SysLoggerAspect implements Ordered {
     @AfterReturning(pointcut = "actionAspect()")
     public void doAfter(JoinPoint joinPoint) {
         System.out.println("=====SysLoggerAspect 后置通知开始=====");
-        HandleLogger.processor(joinPoint, null);
+        ThreadPoolManager.getInstance().addTask(new HandleLogger(joinPoint,startTime,sysLoggerService,null));
+//        new HandleLogger(joinPoint,null,sysLoggerService).run();
     }
 
     /**
@@ -68,7 +72,7 @@ public class SysLoggerAspect implements Ordered {
     @AfterThrowing(value = "actionAspect()", throwing = "e")
     public void doAfter(JoinPoint joinPoint, Exception e) {
         System.out.println("=====SysLoggerAspect 异常通知开始=====");
-        HandleLogger.processor(joinPoint, e);
+        ThreadPoolManager.getInstance().addTask(new HandleLogger(joinPoint,startTime,sysLoggerService,e));
     }
 
 

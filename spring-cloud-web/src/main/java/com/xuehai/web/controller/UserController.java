@@ -1,7 +1,6 @@
 package com.xuehai.web.controller;
 
 import com.xuehai.web.annotation.SysLogger;
-import com.xuehai.web.annotation.SysTime;
 import com.xuehai.web.entity.SysLoggerEntity;
 import com.xuehai.web.entity.UserEntity;
 import com.xuehai.web.service.SysLoggerService;
@@ -16,6 +15,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
@@ -46,6 +46,11 @@ public class UserController {
     @RequestMapping({"/user/{id}"})
     public List<UserEntity> userInfo(@PathVariable Integer id, HttpServletRequest request){
         logger.info(request);
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return userService.getUserInfo(id);
 
     }
@@ -54,11 +59,7 @@ public class UserController {
     @RequestMapping({"/exceptionTest"})
     public String exceptionTest() throws Exception{
 
-        try {
             int i = 1 / 0 ;
-        } catch (Exception e){
-            throw new Exception(" 分母不能为0");
-        }
 
         return "";
     }

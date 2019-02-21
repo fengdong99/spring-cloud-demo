@@ -1,5 +1,6 @@
 package com.xuehai.web.annotation;
 
+import com.xuehai.integration.SpringContextHolder;
 import com.xuehai.web.entity.SysLoggerEntity;
 import com.xuehai.web.service.SysLoggerService;
 import com.xuehai.web.tool.CommonUtil;
@@ -8,28 +9,39 @@ import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.Signature;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 
 import java.lang.reflect.Method;
 
-
-public class HandleLogger {
+/**
+ * APT处理器
+ */
+@ComponentScan
+public class HandleLogger implements  Runnable{
     private static final Logger logger = Logger.getLogger(HandleLogger.class);
 
-    @Autowired
-    private static SysLoggerService sysLoggerService;
+    private SysLoggerService sysLoggerService;
 
+    private JoinPoint joinPoint = null;
+    private Exception e = null;
+    private long startTime = 0;
 
-    private static long startTime = 0;
+    public HandleLogger(JoinPoint joinPoint, long startTime,SysLoggerService sysLoggerService,Exception e){
+        this.joinPoint = joinPoint;
+        this.startTime = startTime;
+        this.sysLoggerService = sysLoggerService;
+        this.e = e;
+
+    }
 
     /**
      * 日志处理
      */
-    public static void processor(JoinPoint joinPoint, Exception e) {
+    public void processor(JoinPoint joinPoint, Exception e) {
 
         long endTime = System.currentTimeMillis() - startTime;
-        startTime = 0;
         logger.info("exec time:"+ endTime);
 
         if(e != null){
@@ -60,8 +72,7 @@ public class HandleLogger {
                     logger.info("clazzName: " + clazzName + ", methodName: " + method.getName());
                 }
             }
-
-
+//            SysLoggerService sysLoggerService1 = SpringContextHolder.getBean("sysLoggerService");
             sysLoggerService.saveSysLooger(new SysLoggerEntity(CommonUtil.getUuid(),sysLogger.name(),String.valueOf(endTime),CommonUtil.getSystemTime()));
         } catch (Exception exp) {
             logger.error("异常信息:"+exp.getMessage());
@@ -72,7 +83,7 @@ public class HandleLogger {
     /**
      * 检查注解方法
      */
-    private static SysLogger checkAnnotation(JoinPoint joinPoint) throws Exception {
+    private SysLogger checkAnnotation(JoinPoint joinPoint) throws Exception {
         Signature signature = joinPoint.getSignature();
         MethodSignature methodSignature = (MethodSignature) signature;
         Method method = methodSignature.getMethod();
@@ -83,5 +94,8 @@ public class HandleLogger {
         return null;
     }
 
-
+    @Override
+    public void run() {
+        this.processor(joinPoint,e);
+    }
 }
