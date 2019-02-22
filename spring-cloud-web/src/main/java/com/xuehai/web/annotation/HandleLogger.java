@@ -12,7 +12,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
 
+import javax.servlet.http.HttpSession;
 import java.lang.reflect.Method;
 
 /**
@@ -70,8 +73,13 @@ public class HandleLogger implements  Runnable{
                 if (method.isAnnotationPresent(SysLogger.class) && method.getName().equals(methodName) ) {
                     String clazzName = clazz.getName();
                     logger.info("clazzName: " + clazzName + ", methodName: " + method.getName());
+                    break;
                 }
             }
+            HttpSession session = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest().getSession();
+            String userName = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest().getSession().getAttribute("username").toString();
+
+
 //            SysLoggerService sysLoggerService1 = SpringContextHolder.getBean("sysLoggerService");
             sysLoggerService.saveSysLooger(new SysLoggerEntity(CommonUtil.getUuid(),sysLogger.name(),String.valueOf(endTime),CommonUtil.getSystemTime()));
         } catch (Exception exp) {
