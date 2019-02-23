@@ -100,10 +100,10 @@
 			<scope>provided</scope>
 		</dependency>
 
-	<!--	<dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-tomcat</artifactId>
-		</dependency>-->
+		</dependency>
 
 	<!--	<dependency>
 			<groupId>org.apache.shiro</groupId>
@@ -158,6 +158,18 @@
 			<version>1.8.10</version>
 		</dependency>
 	-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+			<!-- 打包时，移除嵌入式tomcat插件 -->
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-tomcat</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

@@ -61,7 +61,7 @@ public class UserController {
 
             int i = 1 / 0 ;
 
-        return "";
+        return "error";
     }
 
     @RequestMapping({"/intLog"})
