@@ -1,6 +1,5 @@
 package com.xuehai.web.annotation;
 
-import com.xuehai.integration.SpringContextHolder;
 import com.xuehai.web.entity.SysLoggerEntity;
 import com.xuehai.web.service.SysLoggerService;
 import com.xuehai.web.tool.CommonUtil;
@@ -8,10 +7,7 @@ import org.apache.log4j.Logger;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.Signature;
 import org.aspectj.lang.reflect.MethodSignature;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
@@ -78,7 +74,6 @@ public class HandleLogger implements  Runnable{
             }
             HttpSession session = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest().getSession();
             String userName = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest().getSession().getAttribute("username").toString();
-
 
 //            SysLoggerService sysLoggerService1 = SpringContextHolder.getBean("sysLoggerService");
             sysLoggerService.saveSysLooger(new SysLoggerEntity(CommonUtil.getUuid(),sysLogger.name(),String.valueOf(endTime),CommonUtil.getSystemTime()));

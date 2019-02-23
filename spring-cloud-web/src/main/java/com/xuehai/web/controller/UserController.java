@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
@@ -44,7 +43,7 @@ public class UserController {
 
     @SysLogger(name = "controller 测试",startTopic = true,topicId = "myTopic123")
     @RequestMapping({"/user/{id}"})
-    public List<UserEntity> userInfo(@PathVariable Integer id, HttpServletRequest request){
+    public List<UserEntity> userInfo(@PathVariable Integer id, HttpServletRequest request,String goodsId){
         logger.info(request);
         try {
             Thread.sleep(2000);
