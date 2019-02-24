@@ -8,11 +8,9 @@ import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.Signature;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.web.context.request.RequestContextHolder;
-import org.springframework.web.context.request.ServletRequestAttributes;
 
-import javax.servlet.http.HttpSession;
 import java.lang.reflect.Method;
+import java.lang.reflect.Parameter;
 
 /**
  * APT处理器
@@ -61,6 +59,8 @@ public class HandleLogger implements  Runnable{
 
             String methodName = joinPoint.getSignature().getName();
 
+
+
             String classType = joinPoint.getTarget().getClass().getName();
             Class<?> clazz = Class.forName(classType);
             Method[] methods = clazz.getDeclaredMethods();
@@ -69,11 +69,21 @@ public class HandleLogger implements  Runnable{
                 if (method.isAnnotationPresent(SysLogger.class) && method.getName().equals(methodName) ) {
                     String clazzName = clazz.getName();
                     logger.info("clazzName: " + clazzName + ", methodName: " + method.getName());
+
+                    Parameter[] parameters = method.getParameters();
+                    for (Parameter param : parameters){
+                        logger.info(param.getType());
+                    }
+
+
+
                     break;
                 }
             }
-            HttpSession session = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest().getSession();
-            String userName = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest().getSession().getAttribute("username").toString();
+
+
+//            HttpSession session = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest().getSession();
+//            String userName = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest().getSession().getAttribute("username").toString();
 
 //            SysLoggerService sysLoggerService1 = SpringContextHolder.getBean("sysLoggerService");
             sysLoggerService.saveSysLooger(new SysLoggerEntity(CommonUtil.getUuid(),sysLogger.name(),String.valueOf(endTime),CommonUtil.getSystemTime()));
