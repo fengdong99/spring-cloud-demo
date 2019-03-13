@@ -1,4 +1,11 @@
 # spring-cloud-demo
+## webUI
+        eureka webUI
+![](https://github.com/fengdong99/spring-cloud-demo/blob/master/img/eureka1.png)
+        admin webUI
+![](https://github.com/fengdong99/spring-cloud-demo/blob/master/img/admin1.png)
+![](https://github.com/fengdong99/spring-cloud-demo/blob/master/img/admin2.png)
+
 ## 修改本地hosts文件，添加eureka
     127.0.0.1 eureka1
     127.0.0.1 eureka2
@@ -48,4 +55,3 @@
 
 ## admin demo服务
     http://localhost:8200
-
