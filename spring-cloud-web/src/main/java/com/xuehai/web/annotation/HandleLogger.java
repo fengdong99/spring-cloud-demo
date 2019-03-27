@@ -56,10 +56,7 @@ public class HandleLogger implements  Runnable{
                 logger.info(sysLogger.topicId());
             }
 
-
             String methodName = joinPoint.getSignature().getName();
-
-
 
             String classType = joinPoint.getTarget().getClass().getName();
             Class<?> clazz = Class.forName(classType);
@@ -68,19 +65,16 @@ public class HandleLogger implements  Runnable{
             for (Method method : methods) {
                 if (method.isAnnotationPresent(SysLogger.class) && method.getName().equals(methodName) ) {
                     String clazzName = clazz.getName();
+
                     logger.info("clazzName: " + clazzName + ", methodName: " + method.getName());
 
                     Parameter[] parameters = method.getParameters();
                     for (Parameter param : parameters){
                         logger.info(param.getType());
                     }
-
-
-
                     break;
                 }
             }
-
 
 //            HttpSession session = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest().getSession();
 //            String userName = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest().getSession().getAttribute("username").toString();
