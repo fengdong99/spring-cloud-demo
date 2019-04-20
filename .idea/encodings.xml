@@ -2,12 +2,20 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/spring-cloud-admin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-consul" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-consul/consul-consumer" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-consul/consul-producer1" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-consul/consul-producer2" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-eureka" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-cloud-eureka-client" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-eureka-server1" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-cloud-eureka/eureka-server1" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-cloud-eureka/eureka-server2" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-cloud-feign" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-hystrix" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-cloud-hystrix/spring-cloud-hystrix-feign" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-cloud-hystrix/spring-cloud-hystrix-ribbon" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud-producer" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-cloud-producer/eureka-producer1" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-cloud-producer/eureka-producer2" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-cloud-ribbon" charset="UTF-8" />
@@ -18,6 +26,7 @@
     <file url="file://$PROJECT_DIR$/springbooot-integration/kafka-demo" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springbooot-integration/springboot-kafka-consumer" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springbooot-integration/springboot-kafka-producer" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud-ribbon-hystrix" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
