@@ -36,8 +36,8 @@
         <option value="$PROJECT_DIR$/spring-cloud-eureka-server1/pom.xml" />
         <option value="$PROJECT_DIR$/spring-cloud-hystrix/pom.xml" />
         <option value="$PROJECT_DIR$/spring-cloud-producer/pom.xml" />
-        <option value="$PROJECT_DIR$/springbooot-integration/pom.xml" />
         <option value="$PROJECT_DIR$/springbooot-integration/flume-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/springbooot-integration/pom.xml" />
       </list>
     </option>
   </component>

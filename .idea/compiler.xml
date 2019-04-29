@@ -107,7 +107,19 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="springbooot-integration" />
+      </profile>
+      <profile default="false" name="Annotation profile for redis-demo" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="redis-demo" />
+      </profile>
+      <profile default="false" name="Annotation profile for redis-demo1" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
@@ -120,6 +132,8 @@
       <module name="eureka-server2" target="1.8" />
       <module name="flume-demo" target="1.8" />
       <module name="kafka-demo" target="1.8" />
+      <module name="redis-demo" target="1.8" />
+      <module name="redis-demo1" target="1.8" />
       <module name="spring-cloud-admin" target="1.8" />
       <module name="spring-cloud-consul" target="1.8" />
       <module name="spring-cloud-eureka" target="1.8" />

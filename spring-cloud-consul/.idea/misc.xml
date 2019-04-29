@@ -32,6 +32,7 @@
         <option value="$PROJECT_DIR$/../springbooot-integration/springboot-kafka-consumer/pom.xml" />
         <option value="$PROJECT_DIR$/../spring-cloud-admin/pom.xml" />
         <option value="$PROJECT_DIR$/../springbooot-integration/kafka-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/../springbooot-integration/flume-demo/pom.xml" />
       </list>
     </option>
   </component>

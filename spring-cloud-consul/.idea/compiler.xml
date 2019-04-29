@@ -195,6 +195,13 @@
         <processorPath useClasspath="true" />
         <module name="kafka-demo" />
       </profile>
+      <profile default="false" name="Annotation profile for flume-demo" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="flume-demo" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="consul-consumer" target="1.8" />
@@ -205,6 +212,7 @@
       <module name="eureka-producer2" target="1.8" />
       <module name="eureka-server1" target="1.8" />
       <module name="eureka-server2" target="1.8" />
+      <module name="flume-demo" target="1.8" />
       <module name="kafka-demo" target="1.8" />
       <module name="spring-cloud-admin" target="1.8" />
       <module name="spring-cloud-consul" target="1.8" />
