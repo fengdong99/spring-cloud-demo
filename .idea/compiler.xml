@@ -3,13 +3,7 @@
   <component name="CompilerConfiguration">
     <resourceExtensions />
     <annotationProcessing>
-      <profile default="true" name="Default" enabled="false">
-        <processorPath useClasspath="true" />
-      </profile>
-      <profile default="false" name="Maven default annotation processors profile" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
+      <profile default="true" name="Default" enabled="true">
         <processorPath useClasspath="true" />
       </profile>
       <profile default="false" name="Annotation profile for spring-cloud-web" enabled="true">
@@ -84,6 +78,111 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
       </profile>
+      <profile default="false" name="Annotation profile for redis-demo" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="redis-demo" />
+      </profile>
+      <profile default="false" name="Annotation profile for spring-cloud-admin" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="spring-cloud-admin" />
+      </profile>
+      <profile default="false" name="Annotation profile for eureka-server1" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="eureka-server1" />
+      </profile>
+      <profile default="false" name="Annotation profile for eureka-server2" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="eureka-server2" />
+      </profile>
+      <profile default="false" name="Annotation profile for spring-cloud-eureka-client" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="spring-cloud-eureka-client" />
+      </profile>
+      <profile default="false" name="Annotation profile for spring-cloud-feign" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="spring-cloud-feign" />
+      </profile>
+      <profile default="false" name="Annotation profile for spring-cloud-hystrix-feign" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="spring-cloud-hystrix-feign" />
+      </profile>
+      <profile default="false" name="Annotation profile for spring-cloud-hystrix-ribbon" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="spring-cloud-hystrix-ribbon" />
+      </profile>
+      <profile default="false" name="Annotation profile for eureka-producer1" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="eureka-producer1" />
+      </profile>
+      <profile default="false" name="Annotation profile for eureka-producer2" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="eureka-producer2" />
+      </profile>
+      <profile default="false" name="Annotation profile for spring-cloud-ribbon" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="spring-cloud-ribbon" />
+      </profile>
+      <profile default="false" name="Annotation profile for spring-cloud-zuul" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="spring-cloud-zuul" />
+      </profile>
+      <profile default="false" name="Annotation profile for kafka-demo" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="kafka-demo" />
+      </profile>
+      <profile default="false" name="Annotation profile for springboot-kafka-consumer" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="springboot-kafka-consumer" />
+      </profile>
+      <profile default="false" name="Annotation profile for springboot-kafka-producer" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="springboot-kafka-producer" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
       <module name="consul-consumer" target="1.8" />
@@ -96,7 +195,6 @@
       <module name="flume-demo" target="1.8" />
       <module name="kafka-demo" target="1.8" />
       <module name="redis-demo" target="1.8" />
-      <module name="redis-demo1" target="1.8" />
       <module name="spring-cloud-admin" target="1.8" />
       <module name="spring-cloud-consul" target="1.8" />
       <module name="spring-cloud-eureka" target="1.8" />

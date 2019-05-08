@@ -11,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-eureka/eureka-server2/eureka-server2.iml" filepath="$PROJECT_DIR$/spring-cloud-eureka/eureka-server2/eureka-server2.iml" />
       <module fileurl="file://$PROJECT_DIR$/springbooot-integration/flume-demo/flume-demo.iml" filepath="$PROJECT_DIR$/springbooot-integration/flume-demo/flume-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/springbooot-integration/kafka-demo/kafka-demo.iml" filepath="$PROJECT_DIR$/springbooot-integration/kafka-demo/kafka-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springbooot-integration/redis-demo/redis-demo.iml" filepath="$PROJECT_DIR$/springbooot-integration/redis-demo/redis-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-admin/spring-cloud-admin.iml" filepath="$PROJECT_DIR$/spring-cloud-admin/spring-cloud-admin.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-consul/spring-cloud-consul.iml" filepath="$PROJECT_DIR$/spring-cloud-consul/spring-cloud-consul.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/spring-cloud-demo.iml" filepath="$PROJECT_DIR$/.idea/spring-cloud-demo.iml" />
