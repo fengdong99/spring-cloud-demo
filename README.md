@@ -91,3 +91,4 @@
 ## admin demo服务
     spring.application.name=service-admin
     http://localhost:8200
+
